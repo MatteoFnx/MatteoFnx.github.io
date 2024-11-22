@@ -1,0 +1,686 @@
+/* Estilos generales */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+.contenedor {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p,
+.contenedor-parrafo-y-boton p,
+.servicio p {
+  font-size: 20px;
+}
+
+li {
+  list-style: none;
+  margin-right: 25px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 5px 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu p.nombre {
+  margin-left: 20px; /* Ajusta este valor según necesites */
+  flex-shrink: 0; /* Asegura que el nombre no se mueva al reducir la ventana */
+}
+
+.menu nav {
+  flex-grow: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menu li {
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+.titular {
+  text-align: center;
+  margin-top: 200px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 40px;
+}
+
+a {
+  font-size: 14px;
+  background: rgb(84, 84, 84);
+  color: white;
+  padding: 20px 30px;
+}
+
+header {
+  background: url(fondo.jpg);
+  height: 100vh;
+  background-size: cover;
+  padding-top: 60px;
+}
+
+section {
+  margin-top: 60px;
+}
+
+.contenedor {
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+}
+
+/* ARRANCA SECCION SOBRE MI */
+h3 {
+  text-align: center;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+.contenedor-sobremi {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contenedor-sobremi img {
+  max-width: 50%;
+  height: auto;
+}
+
+.contenedor-parrafo-y-boton {
+  width: 42%;
+  text-align: center;
+}
+
+.parrafo-final {
+  margin-bottom: 30px;
+}
+
+.btn-trabajos {
+  display: inline-block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-trabajos:hover {
+  background-color: #555;
+}
+
+.contenedor-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.servicio {
+  padding: 30px;
+  border-radius: 10%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grisoscuro {
+  background: #212121;
+}
+
+.grisaceosuave {
+  background: #333333;
+}
+
+.servicio h4 {
+  font-size: 30px;
+}
+
+.servicio p {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.servicio img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos del botón de menú hamburguesa */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 10px; /* Ajusta este valor según necesites */
+}
+
+.menu-btn span {
+  height: 3px;
+  width: 25px;
+  background: black;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Para dispositivos tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .menu nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-btn {
+    display: flex;
+    margin-right: 20px; /* Ajusta este valor según necesites */
+  }
+
+  .menu-btn.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-btn.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  #navbar.show {
+    display: flex;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Añadido padding interno para separar las opciones del borde */
+  }
+
+  .menu ul li {
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  .menu ul li a {
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contenedor-sobremi {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+  .contenedor-sobremi img {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+  .contenedor-parrafo-y-boton {
+    width: 100%;
+  }
+  .contenedor-servicios {
+    grid-template-columns: 1fr 1fr; /* Dos columnas para tablets */
+    gap: 20px;
+    padding: 20px;
+  }
+  .servicio {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .servicio h4 {
+    font-size: 24px;
+  }
+  .menu p {
+    font-size: 24px;
+  }
+} /* Para dispositivos móviles */
+@media (max-width: 767px) {
+  .titular {
+    text-align: center;
+    margin-top: 150px; /* Ajuste para reducir el margen superior en móviles */
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  p,
+  .contenedor-parrafo-y-boton p,
+  .servicio p {
+    font-size: 16px;
+  }
+  .contenedor-sobremi {
+    flex-direction: column; /* Cambiar a columna para mejor ajuste en móviles */
+    align-items: center;
+    text-align: center;
+  }
+  .contenedor-sobremi img {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+  .contenedor-parrafo-y-boton {
+    width: 100%;
+  }
+  .contenedor-servicios {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna en dispositivos móviles */
+    gap: 20px; /* Espacio entre los servicios */
+    padding: 20px;
+  }
+  .servicio {/* Estilos generales */
+body, h1, h2, h3, p, ul, li, a, .contenedor {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p, .contenedor-parrafo-y-boton p, .servicio p {
+  font-size: 20px;
+}
+
+li {
+  list-style: none;
+  margin-right: 25px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 0; /* Asegura la cobertura sin agregar espacio extra */
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 60px; /* Fijamos la altura */
+  overflow: hidden; /* Ocultamos el contenido sobrante */
+}
+
+.menu p.nombre {
+  margin-left: 20px; /* Ajusta este valor según necesites */
+  flex-shrink: 0; /* Asegura que el nombre no se mueva al reducir la ventana */
+}
+
+.menu nav {
+  flex-grow: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+.titular {
+  text-align: center;
+  margin-top: 200px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 40px;
+}
+
+a {
+  font-size: 14px;
+  background: rgb(84, 84, 84);
+  color: white;
+  padding: 20px 30px;
+}
+
+header {
+  background: url(fondo.jpg);
+  height: 100vh;
+  background-size: cover;
+  padding-top: 60px;
+}
+
+section {
+  margin-top: 60px;
+}
+
+.contenedor {
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+}
+
+/* ARRANCA SECCION SOBRE MI */
+h3 {
+  text-align: center;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+.contenedor-sobremi {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contenedor-sobremi img {
+  max-width: 50%;
+  height: auto;
+}
+
+.contenedor-parrafo-y-boton {
+  width: 42%;
+  text-align: center;
+}
+
+.parrafo-final {
+  margin-bottom: 30px;
+}
+
+.btn-trabajos {
+  display: inline-block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-trabajos:hover {
+  background-color: #555;
+}
+
+.contenedor-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.servicio {
+  padding: 30px;
+  border-radius: 10%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grisoscuro {
+  background: #212121;
+}
+
+.grisaceosuave {
+  background: #333333;
+}
+
+.servicio h4 {
+  font-size: 30px;
+}
+
+.servicio p {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.servicio img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos del botón de menú hamburguesa */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.menu-btn span {
+  height: 3px;
+  width: 25px;
+  background: black;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Para dispositivos tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .menu nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #ffffff;
+  }
+
+  .menu-btn {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .menu-btn.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-btn.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  #navbar.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+  }
+
+  .menu ul li {
+    margin: 10px 0;
+  }
+
+  .menu ul li a {
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contenedor-sobremi {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+  .contenedor-sobremi img {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+  .contenedor-parrafo-y-boton {
+    width: 100%;
+  }
+  .contenedor-servicios {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .servicio {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .servicio h4 {
+    font-size: 24px;
+  }
+  .menu p {
+    font-size: 24px;
+  }
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 767px) {
+  .titular {
+    text-align: center;
+    margin-top: 150px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  p, .contenedor-parrafo-y-boton p, .servicio p {
+    font-size: 16px;
+  }
+  .contenedor-sobremi {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contenedor-sobremi img {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+  .contenedor-parrafo-y-boton {
+    width: 100%;
+  }
+  .contenedor-servicios {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .servicio {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .servicio h4 {
+    font-size: 24px;
+  }
+  .menu p {
+    font-size: 24px;
+  }
+  .menu a {
+    font-size: 18px;
+  }
+  .menu {
+    padding: 5px 0;
+  }
+  .contenedor {
+    padding: 0 10px;
+  }
+}
+
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px; /* Espacio entre los servicios */
+    font-size: 14px;
+  }
+  .servicio h4 {
+    font-size: 24px;
+  }
+  .menu p {
+    font-size: 24px;
+  }
+  .menu a {
+    font-size: 18px;
+  }
+  .menu {
+    padding: 5px 0;
+  }
+  .contenedor {
+    padding: 0 10px; /* Añadir un poco de padding para margen interno en móviles */
+  }
+}
